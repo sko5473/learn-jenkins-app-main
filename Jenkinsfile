@@ -10,6 +10,10 @@ pipeline {
                     reuseNode true
                 }
             }
+
+            steps {
+                
+            }
         }
 
         stage('Test') {
