@@ -49,6 +49,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
+                    echo '트리거 테스트 중 ...'
                     npm install netlify-cli@20.1.1
                     node_modules/.bin/netlify --version
                     echo "프로젝트 배포중.. 사이트아이디 : $NETLIFY_SITE_ID"
