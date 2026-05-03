@@ -1,10 +1,10 @@
 pipeline {
     agent {
-            docker {
-                image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
-                reuseNode true
-            }
+        docker {
+            image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
+            reuseNode true
         }
+    }
 
     environment {
         NETLIFY_SITE_ID = '6b54382e-af62-483f-81d3-469e3983bf64'
