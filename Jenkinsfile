@@ -21,7 +21,7 @@ pipeline {
                     sh '''
                         aws --version
                         echo "Hello S3!" > index.html
-                        aws s3 index.html s3://learn-jenkins-26050301/index.html
+                        aws s3 cp index.html s3://learn-jenkins-26050301/index.html
                     '''
                 }
             }
@@ -82,7 +82,7 @@ pipeline {
         stage('Approval'){
             agent none
             steps {
-                timeout(time: 15, unit: 'MINUTES') {
+                timeout(time: 1, unit: 'MINUTES') {
                     input message: '운영환경에 배포할까요?', ok: '네 배포합니다'
                 }
             }
